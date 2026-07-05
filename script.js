@@ -1,3 +1,10 @@
+// Browser history ko trap karne ke liye
+history.pushState(null, null, location.href);
+
+window.onpopstate = function () {
+    history.go(1); // Back jaane par wapas forward bhej dega
+};
+
 const noBtn = document.getElementById('noBtn');
 const yesBtn = document.getElementById('yesBtn');
 
